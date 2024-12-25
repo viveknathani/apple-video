@@ -1,9 +1,9 @@
+#include <pthread.h>
 #include <stdio.h>
-#include <VideoToolbox/VideoToolbox.h>
 #include <CoreMedia/CoreMedia.h>
 #include <CoreGraphics/CoreGraphics.h>
 #include <CoreFoundation/CoreFoundation.h>
-#include <pthread.h>
+#include <VideoToolbox/VideoToolbox.h>
 
 // NAL unit types
 #define NAL_SPS 0x07
