@@ -116,21 +116,6 @@ int main() {
       if (spsData != NULL && ppsData != NULL) {
         foundSpsPps = true;
       }
-
-      // Store the frame data in a buffer that can be used later for decoding
-      uint8_t *frameData = (uint8_t *)malloc(nalLength);
-      if (!frameData) {
-        printf("Failed to allocate memory for frame data\n");
-        free(buffer);
-        fclose(file);
-        return 0;
-      }
-      memcpy(frameData, nalUnit, nalLength);
-      // Here you can store frameData in a list or queue for later use
-      // For simplicity, we will just free it immediately
-      free(frameData);
-
-      // Move to the next NAL unit
     } else {
       i++; // If not a start code, just move to the next byte
     }
