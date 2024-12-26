@@ -74,7 +74,6 @@ int main() {
     return 0;
   }
   fread(buffer, 1, fileSize, file);
-  fclose(file); // Close the file after reading
 
 
   size_t i = 0;
